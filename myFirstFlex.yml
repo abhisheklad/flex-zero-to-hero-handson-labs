@@ -1,0 +1,26 @@
+---
+integrations:
+  - name: nri-flex
+    interval: 30s
+    config:
+      name: myFirst
+      apis:
+        - name: aaa1
+          commands:
+            - run: sleep 1; echo '{"name":"aaa1"}'
+
+        - name: aaa2
+          commands:
+            - run: sleep 1;echo '{"name":"aaa2"}'
+
+  #       - name: aaa3
+  #         url: https://jsonplaceholder.typicode.com/todos/1
+
+  - name: nri-flex
+    interval: 60s
+    config:
+      name: mySeond
+      apis:
+        - name: bbb1
+          commands:
+            - run: sleep 1; echo '{"name":"bbb1"}'
