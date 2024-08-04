@@ -7,11 +7,11 @@ integrations:
         - name: linuxDirectorySize
           event_type: lab61
           commands:
-            - run: du -s ~/flex
-              split: horizontal
-              set_header: [dirSizeBytes, dirName]
-              regex_match: true
-              split_by: (\d+)\s+(.*)
+            - run: du -s /flexlabs /home /opt /var
+              # split: horizontal
+              # regex_match: true
+              # split_by: (\d+)\s+(.*)
+              # set_header: [dirSizeBytes, dirName]
 ################
 #### Note ######
 # - split (horizontal)
